@@ -1,0 +1,24 @@
+{
+  "name": "wsserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon src/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.mjs",
+    "perf:tests": "sh /Users/rogerpereira/Projects/Study/nim-rest/rinha-de-backend-2024-q1/executar-teste-local.sh",
+    "deploy:docker": "cd /Users/rogerpereira/Projects/Study/nim-rest/rinha-mongodb-hyper-express && docker-compose down && cd /Users/rogerpereira/Projects/Study/nim-rest/rinha-mongodb-hyper-express && docker build -t rogerfelipensk/rinha-q1-2024-hyper-express-mongodb . && cd /Users/rogerpereira/Projects/Study/nim-rest/rinha-mongodb-hyper-express && docker-compose up -d",
+    "start:mongodb": "docker run -d --name mongodb -p 27017:27017 mongo",
+    "stop:mongodb": "docker stop mongodb && docker rm mongodb"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastq": "^1.17.1",
+    "hyper-express": "^6.14.12",
+    "pg": "^8.11.3"
+  }
+}
